@@ -1,0 +1,26 @@
+{
+  "name": "tsnode",
+  "version": "1.0.0",
+  "description": "simple nodejs typescript server",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/buoyad/tsnode.git"
+  },
+  "author": "danny ayoub",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/buoyad/tsnode/issues"
+  },
+  "homepage": "https://github.com/buoyad/tsnode#readme",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "express": "^4.17.21"
+  }
+}
