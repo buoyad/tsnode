@@ -19,7 +19,12 @@
   },
   "homepage": "https://github.com/buoyad/tsnode#readme",
   "devDependencies": {
+    "@babel/core": "^7.23.9",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-typescript": "^7.23.3",
     "@types/express": "^4.17.21",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
     "supertest": "^6.3.4",
     "typescript": "^5.3.3"
