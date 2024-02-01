@@ -1,5 +1,7 @@
 import express from 'express'
 
+// TODO: jest types are ambient here. don't want them here!
+
 const app = express()
 
 app.get('/', (req, res) => {
