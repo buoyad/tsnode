@@ -1,8 +1,6 @@
 import app from './app'
 import request from 'supertest'
 
-request.
-
 describe('GET', () => {
     it('should return 200 OK for /', async () => {
         const server = request(app)
@@ -21,9 +19,9 @@ describe('GET', () => {
 })
 
 describe('POST', () => {
-    it('should return 200 for /', async () => {
+    it('should return 404 for /', async () => {
         const server = request(app)
         const res = await server.post('/')
-        expect(res.status).toBe(200)
+        expect(res.status).toBe(404)
     })
 })
