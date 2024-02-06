@@ -24,4 +24,26 @@ describe('Library', () => {
         testLibrary.borrow(testLibrary.books[0], borrower)
         expect(() => testLibrary.borrow(testLibrary.books[0], borrower)).toThrow()
     })
+
+    it('should return search results', () => {
+        testLibrary.addBook('123', 'Test Book', 'Test Author')
+        testLibrary.addBook('456', 'A brief history of time', 'Stephen Hawking')
+        const borrower = new L.Borrower(L.BorrowerType.Student, 'Test Student')
+        testLibrary.borrow(testLibrary.books[0], borrower)
+        let [books, loans] = testLibrary.search('Test')
+        expect(books.length).toBe(1)
+        expect(loans.length).toBe(1)
+
+        ;[books, loans] = testLibrary.search('Test', 'Test')
+        expect(books.length).toBe(1)
+        expect(loans.length).toBe(1)
+
+        ;[books, loans] = testLibrary.search('Test', 'Hawking')
+        expect(books.length).toBe(2)
+        expect(loans.length).toBe(1)
+
+        ;[books, loans] = testLibrary.search('testtt', 'hawkingg')
+        expect(books.length).toBe(1)
+        expect(loans.length).toBe(0)
+    })
 })
