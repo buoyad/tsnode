@@ -43,7 +43,7 @@ describe('Library', () => {
         expect(loans.length).toBe(1)
 
         ;[books, loans] = testLibrary.search('testtt', 'hawkingg')
-        expect(books.length).toBe(1)
+        expect(books.length).toBe(0)
         expect(loans.length).toBe(0)
     })
 })
